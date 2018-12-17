@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashboard">
+
+
+    <android.support.v7.widget.GridLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:grid="http://schemas.android.com/apk/res-auto"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:padding="20dp"
+
+        grid:alignmentMode="alignBounds"
+        grid:columnCount="2"
+        grid:rowOrderPreserved="false"
+        grid:useDefaultMargins="true">
+
+        <Button
+            android:id="@+id/menuButtonRydin"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:text="Rydin"
+            grid:layout_columnWeight="1"
+            grid:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/menuButtonReport"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:text="Report"
+            grid:layout_columnWeight="1"
+            grid:layout_rowWeight="1"/>
+
+        <Button
+            android:id="@+id/menuButtonTrails"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:text="Trails"
+            grid:layout_columnWeight="1"
+            grid:layout_rowWeight="1"/>
+
+        <Button
+            android:id="@+id/menuButtonProcedures"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:text="Procedures"
+            grid:layout_columnWeight="1"
+            grid:layout_rowWeight="1"/>
+
+    </android.support.v7.widget.GridLayout>
+
+</android.support.constraint.ConstraintLayout>
