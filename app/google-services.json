@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "922528246405",
+    "firebase_url": "https://scotsgaurd-66945.firebaseio.com",
+    "project_id": "scotsgaurd-66945",
+    "storage_bucket": "scotsgaurd-66945.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:922528246405:android:129d96c1d4dcb989",
+        "android_client_info": {
+          "package_name": "edu.covenant.safety.scotsgaurd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "922528246405-v73vib1qgho0mb5rm9aqrobtls1o67le.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5ohHFkpZIpQMqZ6ziKujoftznB0nq7fI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
