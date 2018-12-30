@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Dashboard"></activity>
+        <activity android:name=".Dashboard" />
+        <activity android:name=".ShuttleRequestActivity" />
+        <activity android:name=".MessageSecurityActivity"></activity>
     </application>
 
 </manifest>

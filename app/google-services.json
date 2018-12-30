@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "922528246405-9kvo0c6cdktv16grusvolfb5qbkvav63.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.covenant.safety.scotsgaurd",
+            "certificate_hash": "4131a02e814c3a00e779c57fa2d20ed63d308986"
+          }
+        },
+        {
           "client_id": "922528246405-v73vib1qgho0mb5rm9aqrobtls1o67le.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "922528246405-v73vib1qgho0mb5rm9aqrobtls1o67le.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

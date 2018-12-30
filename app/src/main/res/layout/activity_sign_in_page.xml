@@ -21,11 +21,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/signInUsername"
+        android:id="@+id/signInemail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="Username"
+        android:text="Email"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -33,7 +33,7 @@
         app:layout_constraintTop_toBottomOf="@+id/signInLabel" />
 
     <EditText
-        android:id="@+id/signInUsernameInput"
+        android:id="@+id/signInEmailInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -43,7 +43,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signInUsername" />
+        app:layout_constraintTop_toBottomOf="@+id/signInemail" />
 
     <TextView
         android:id="@+id/signInPassword"
@@ -55,7 +55,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signInUsernameInput" />
+        app:layout_constraintTop_toBottomOf="@+id/signInEmailInput" />
 
     <EditText
         android:id="@+id/signInPasswordInput"
@@ -70,11 +70,10 @@
         app:layout_constraintTop_toBottomOf="@+id/signInPassword" />
 
     <Button
-        android:id="@+id/signInButtonLogin"
+        android:id="@+id/signInButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:onClick="login"
         android:text="Login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

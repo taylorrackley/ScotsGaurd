@@ -22,15 +22,15 @@
         grid:useDefaultMargins="true">
 
         <Button
-            android:id="@+id/menuButtonRydin"
+            android:id="@+id/menuBtnShuttle"
             android:layout_width="0dp"
             android:layout_height="100dp"
-            android:text="Rydin"
+            android:text="Shuttle"
             grid:layout_columnWeight="1"
             grid:layout_rowWeight="1" />
 
         <Button
-            android:id="@+id/menuButtonReport"
+            android:id="@+id/menuBtnReport"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:text="Report"
@@ -38,15 +38,15 @@
             grid:layout_rowWeight="1"/>
 
         <Button
-            android:id="@+id/menuButtonTrails"
+            android:id="@+id/menuBtnMessageSecurity"
             android:layout_width="0dp"
             android:layout_height="100dp"
-            android:text="Trails"
+            android:text="Message Security"
             grid:layout_columnWeight="1"
             grid:layout_rowWeight="1"/>
 
         <Button
-            android:id="@+id/menuButtonProcedures"
+            android:id="@+id/menuBtnProcedures"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:text="Procedures"
