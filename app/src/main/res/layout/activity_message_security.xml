@@ -6,20 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".MessageSecurityActivity">
 
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar_include"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list_messages"
+        android:layout_below="@id/toolbar_include"
+        android:layout_above="@id/message_input_container">
+
+    </android.support.v7.widget.RecyclerView>
+
     <RelativeLayout
+        android:id="@+id/message_input_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:background="#fff"
         android:layout_alignParentBottom="true">
-
-        <view class="android.support.v7.app.AlertController$RecycleListView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/list_messages"
-            android:layout_above="@id/message_text">
-
-        </view>
 
         <EditText
             android:layout_width="match_parent"

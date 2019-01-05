@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Dashboard">
 
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar_include"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
-    <android.support.v7.widget.GridLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.v7.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:grid="http://schemas.android.com/apk/res-auto"
 
+        android:id="@+id/menu_grid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
+        android:layout_below="@id/toolbar_include"
         android:padding="20dp"
 
-        grid:alignmentMode="alignBounds"
+        android:scaleType="centerCrop"
         grid:columnCount="2"
-        grid:rowOrderPreserved="false"
-        grid:useDefaultMargins="true">
+        grid:rowOrderPreserved="false">
 
         <Button
             android:id="@+id/menuBtnShuttle"
@@ -35,7 +39,7 @@
             android:layout_height="100dp"
             android:text="Report"
             grid:layout_columnWeight="1"
-            grid:layout_rowWeight="1"/>
+            grid:layout_rowWeight="1" />
 
         <Button
             android:id="@+id/menuBtnMessageSecurity"
@@ -43,7 +47,7 @@
             android:layout_height="100dp"
             android:text="Message Security"
             grid:layout_columnWeight="1"
-            grid:layout_rowWeight="1"/>
+            grid:layout_rowWeight="1" />
 
         <Button
             android:id="@+id/menuBtnProcedures"
@@ -51,8 +55,8 @@
             android:layout_height="100dp"
             android:text="Procedures"
             grid:layout_columnWeight="1"
-            grid:layout_rowWeight="1"/>
+            grid:layout_rowWeight="1" />
 
     </android.support.v7.widget.GridLayout>
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
