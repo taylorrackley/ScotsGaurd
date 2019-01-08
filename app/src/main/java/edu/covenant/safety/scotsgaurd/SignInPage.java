@@ -18,20 +18,16 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class SignInPage extends AppCompatActivity {
 
-    EditText emailAddress, password;
-    Button login;
+    private EditText emailAddress, password;
+    private Button login;
 
-    FirebaseAuth auth;
-    FirebaseUser firebaseUser;
+    private FirebaseAuth auth;
+    private FirebaseUser firebaseUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in_page);
-
-        emailAddress = findViewById(R.id.signInEmailInput);
-        password = findViewById(R.id.signInPasswordInput);
-        login = (Button) findViewById(R.id.signInButton);
 
         auth = FirebaseAuth.getInstance();
 
@@ -40,27 +36,31 @@ public class SignInPage extends AppCompatActivity {
             login();
         }
 
+        emailAddress = findViewById(R.id.signin_username_input);
+        password = findViewById(R.id.signin_password_input);
+        login = findViewById(R.id.signin_signin_btn);
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email = emailAddress.getText().toString();
-                String pass = password.getText().toString();
+            String email = emailAddress.getText().toString();
+            String pass = password.getText().toString();
 
-                if(TextUtils.isEmpty(email) || TextUtils.isEmpty(pass)) {
-                    Toast.makeText(SignInPage.this, "Both email and password are required", Toast.LENGTH_LONG).show();
-                } else {
-                    auth.signInWithEmailAndPassword(email, pass)
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if(task.isSuccessful()) {
-                                    login();
-                                } else {
-                                    Toast.makeText(SignInPage.this, "Login failed", Toast.LENGTH_SHORT).show();
-                                }
+            if(TextUtils.isEmpty(email) || TextUtils.isEmpty(pass)) {
+                Toast.makeText(SignInPage.this, "Both email and password are required", Toast.LENGTH_LONG).show();
+            } else {
+                auth.signInWithEmailAndPassword(email, pass)
+                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if(task.isSuccessful()) {
+                                login();
+                            } else {
+                                Toast.makeText(SignInPage.this, "Login failed", Toast.LENGTH_SHORT).show();
                             }
-                    });
-                }
+                        }
+                });
+            }
             }
         });
 

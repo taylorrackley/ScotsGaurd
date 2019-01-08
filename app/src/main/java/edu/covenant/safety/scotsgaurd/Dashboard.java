@@ -26,6 +26,7 @@ public class Dashboard extends AppCompatActivity {
 
     Button shuttle;
     Button messageSecurity;
+    Button activeChats;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +43,12 @@ public class Dashboard extends AppCompatActivity {
 
         shuttle = findViewById(R.id.menuBtnShuttle);
         messageSecurity = findViewById(R.id.menuBtnMessageSecurity);
+        activeChats = findViewById(R.id.menuBtnViewChats);
 
         firebaseDB.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
+                //TODO add username to toolbar
             }
 
             @Override
@@ -60,6 +62,14 @@ public class Dashboard extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Dashboard.this, MessageSecurityActivity.class);
                 //intent.putExtra("officeId", "rdWxxLygmagtHkj3DRzCcyU4Tak1");
+                startActivity(intent);
+            }
+        });
+
+        activeChats.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Dashboard.this, ChatsActivity.class);
                 startActivity(intent);
             }
         });

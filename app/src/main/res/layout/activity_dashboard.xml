@@ -57,6 +57,14 @@
             grid:layout_columnWeight="1"
             grid:layout_rowWeight="1" />
 
+        <Button
+            android:id="@+id/menuBtnViewChats"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:text="Chats"
+            grid:layout_columnWeight="1"
+            grid:layout_rowWeight="1" />
+
     </android.support.v7.widget.GridLayout>
 
 </RelativeLayout>
