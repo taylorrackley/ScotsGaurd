@@ -9,6 +9,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.support.v7.widget.GridLayout;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -18,7 +20,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class Dashboard extends AppCompatActivity {
+import edu.covenant.safety.scotsgaurd.Model.User;
+
+public class StudentDashboardActivity extends AppCompatActivity {
 
     FirebaseAuth auth;
     FirebaseUser firebaseUser;
@@ -26,16 +30,20 @@ public class Dashboard extends AppCompatActivity {
 
     Button shuttle;
     Button messageSecurity;
-    Button activeChats;
+
+    TextView toolbarUsername;
+    GridLayout dashboardMenu;
+
+    User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard);
+        setContentView(R.layout.activity_student_dashboard);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("ScotsGaurd");
+        getSupportActionBar().setTitle("");
 
         auth = FirebaseAuth.getInstance();
         firebaseUser = auth.getCurrentUser();
@@ -43,34 +51,30 @@ public class Dashboard extends AppCompatActivity {
 
         shuttle = findViewById(R.id.menuBtnShuttle);
         messageSecurity = findViewById(R.id.menuBtnMessageSecurity);
-        activeChats = findViewById(R.id.menuBtnViewChats);
 
-        firebaseDB.addValueEventListener(new ValueEventListener() {
+        toolbarUsername = findViewById(R.id.toolbar_username);
+        dashboardMenu = findViewById(R.id.menu_grid);
+
+        firebaseDB.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                //TODO add username to toolbar
+                user = dataSnapshot.getValue(User.class);
+
+                toolbarUsername.setText(user.getUsername());
+
+                messageSecurity.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(StudentDashboardActivity.this, MessageSecurityActivity.class);
+                        //intent.putExtra("officeId", "rdWxxLygmagtHkj3DRzCcyU4Tak1");
+                        startActivity(intent);
+                    }
+                });
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
-            }
-        });
-
-        messageSecurity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Dashboard.this, MessageSecurityActivity.class);
-                //intent.putExtra("officeId", "rdWxxLygmagtHkj3DRzCcyU4Tak1");
-                startActivity(intent);
-            }
-        });
-
-        activeChats.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Dashboard.this, ChatsActivity.class);
-                startActivity(intent);
             }
         });
 
@@ -81,7 +85,7 @@ public class Dashboard extends AppCompatActivity {
         super.onResume();
         // Check for previous login
         if(firebaseUser == null) {
-            Intent intent = new Intent(Dashboard.this, SignInPage.class);
+            Intent intent = new Intent(StudentDashboardActivity.this, SignInPageActivity.class);
             startActivity(intent);
             finish();
         }
@@ -98,7 +102,7 @@ public class Dashboard extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.logout:
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(Dashboard.this, SignInPage.class));
+                startActivity(new Intent(StudentDashboardActivity.this, SignInPageActivity.class));
                 finish();
                 return true;
         }

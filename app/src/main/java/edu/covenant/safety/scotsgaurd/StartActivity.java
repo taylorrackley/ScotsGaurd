@@ -28,7 +28,7 @@ public class StartActivity extends AppCompatActivity {
 
         firebaseUser = auth.getCurrentUser();
         if(firebaseUser != null) {
-            intent = new Intent(StartActivity.this, Dashboard.class);
+            intent = new Intent(StartActivity.this, SignInPageActivity.class);
             startActivity(intent);
             finish();
         }
@@ -39,9 +39,8 @@ public class StartActivity extends AppCompatActivity {
         goToSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(StartActivity.this, SignInPage.class);
+                intent = new Intent(StartActivity.this, SignInPageActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -50,7 +49,6 @@ public class StartActivity extends AppCompatActivity {
             public void onClick(View v) {
                 intent = new Intent(StartActivity.this, RegisterActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
 

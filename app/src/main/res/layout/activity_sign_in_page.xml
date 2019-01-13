@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignInPage"
+    tools:context=".SignInPageActivity"
     android:background="@color/colorPrimary">
 
     <TextView
@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/droid_serif_bold"
-        android:text="@string/signin_title"
+        android:text="@string/title"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="50dp"
         android:textAlignment="center"
@@ -38,7 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:hint="Username"/>
+                android:hint="firstname.lastname"/>
 
             <EditText
                 android:id="@+id/signin_password_input"

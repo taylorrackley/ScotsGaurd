@@ -1,10 +1,11 @@
 <resources>
     <string name="app_name">ScotsGaurd</string>
 
-    <string name="start_title">ScotsGuard</string>
+    <string name="title">ScotsGuard</string>
     <string name="start_signin_btn">SIGN IN</string>
     <string name="start_register_btn">REGISTER</string>
 
-    <string name="signin_title">ScotsGaurd</string>
     <string name="signin_signin_btn">Sign In</string>
+
+    <string name="register_btn">Register</string>
 </resources>

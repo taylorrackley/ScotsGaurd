@@ -1,9 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".SignInPageActivity"
+    android:background="@color/colorPrimary">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/start_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/droid_serif_bold"
+        android:text="@string/title"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="50dp"
+        android:textAlignment="center"
+        android:layout_marginTop="175dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/start_title"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/register_bannerid_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="8"
+                android:hint="Banner ID"/>
+
+            <EditText
+                android:id="@+id/register_username_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:maxLength="50"
+                android:hint="firstname.lastname"/>
+
+            <EditText
+                android:id="@+id/register_password_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:maxLength="50"
+                android:hint="Password"/>
+
+            <Button
+                android:id="@+id/register_register_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="13dp"
+
+                android:fontFamily="@font/droid_serif_bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="22dp"
+                android:text="@string/register_btn" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

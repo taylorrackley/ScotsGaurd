@@ -112,7 +112,7 @@ public class MessageSecurityActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.logout:
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(MessageSecurityActivity.this, SignInPage.class));
+                startActivity(new Intent(MessageSecurityActivity.this, SignInPageActivity.class));
                 finish();
                 return true;
         }

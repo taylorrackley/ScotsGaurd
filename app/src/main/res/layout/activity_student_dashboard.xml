@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Dashboard">
+    android:background="@color/colorPrimary"
+    tools:context=".StudentDashboardActivity">
 
     <include
         layout="@layout/toolbar"
@@ -26,6 +27,7 @@
         grid:rowOrderPreserved="false">
 
         <Button
+            style="@style/Widget.AppCompat.Button.Colored"
             android:id="@+id/menuBtnShuttle"
             android:layout_width="0dp"
             android:layout_height="100dp"
@@ -34,6 +36,7 @@
             grid:layout_rowWeight="1" />
 
         <Button
+            style="@style/Widget.AppCompat.Button.Colored"
             android:id="@+id/menuBtnReport"
             android:layout_width="0dp"
             android:layout_height="100dp"
@@ -42,6 +45,7 @@
             grid:layout_rowWeight="1" />
 
         <Button
+            style="@style/Widget.AppCompat.Button.Colored"
             android:id="@+id/menuBtnMessageSecurity"
             android:layout_width="0dp"
             android:layout_height="100dp"
@@ -50,18 +54,11 @@
             grid:layout_rowWeight="1" />
 
         <Button
+            style="@style/Widget.AppCompat.Button.Colored"
             android:id="@+id/menuBtnProcedures"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:text="Procedures"
-            grid:layout_columnWeight="1"
-            grid:layout_rowWeight="1" />
-
-        <Button
-            android:id="@+id/menuBtnViewChats"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:text="Chats"
             grid:layout_columnWeight="1"
             grid:layout_rowWeight="1" />
 

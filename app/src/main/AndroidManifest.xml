@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SignInPage" />
-        <activity android:name=".Dashboard" />
+        <activity android:name=".SignInPageActivity" />
+        <activity android:name=".StudentDashboardActivity" />
         <activity android:name=".ShuttleRequestActivity" />
         <activity android:name=".MessageSecurityActivity" />
         <activity android:name=".ChatsActivity" />
@@ -21,7 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".AdminDashboardActivity"></activity>
     </application>
 
 </manifest>
